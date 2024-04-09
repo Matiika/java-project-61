@@ -1,4 +1,6 @@
-package hexlet.code;
+package hexlet.code.games;
+import hexlet.code.Engine;
+
 import java.util.Scanner;
 import java.util.Random;
 public class Even {
@@ -9,7 +11,7 @@ public class Even {
         System.out.println("Hello, " + name + "\n" + "Answer 'yes' if the number is even, otherwise answer 'no'.");
 
         Random random = new Random();
-        int randomNumber = random.nextInt(100);
+        int randomNumber;
         String answer;
         int i = 0;
         for (i = 0; i < 3; i++) {
@@ -25,25 +27,12 @@ public class Even {
                 correctAnswer = "no";
             }
 
-            if (correctAnswer.equals(answer)) {
-                System.out.println("Correct!");
-            }
-
-            if (!correctAnswer.equals(answer) && correctAnswer.equals("yes")) {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was 'yes'.\n" +
-                        "Let's try again, " + name + "!");
+            if (!Engine.checkAnswer(correctAnswer, answer, name)) {
                 break;
             }
-
-            if (!correctAnswer.equals(answer) && correctAnswer.equals("no")) {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was 'no'.\n" +
-                        "Let's try again, " + name + "!");
-                break;
-            }
-
 
             if (i == 2) {
-                System.out.print("Congratulations, " + name + "!");
+                Engine.congratulations(name);
             }
         }
     }

@@ -1,5 +1,6 @@
 package hexlet.code;
-import java.sql.SQLOutput;
+import hexlet.code.games.Even;
+
 import java.util.Scanner;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
