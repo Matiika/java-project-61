@@ -12,13 +12,13 @@ public class Even {
         Random random = new Random();
         int randomNumber;
         String answer;
+        String correctAnswer;
 
         for (int i = 0; i < 3; i++) {
             randomNumber = random.nextInt(100);
             System.out.println("Question: " + randomNumber);
             answer = in.nextLine();
             System.out.println("Your answer: " + answer);
-            String correctAnswer;
 
             if (randomNumber % 2 == 0) {
                 correctAnswer = "yes";
