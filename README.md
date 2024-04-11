@@ -5,3 +5,8 @@
 Even 
 ![Even1](https://github.com/Matiika/java-project-61/assets/45766685/317d0241-b136-49dd-a77c-af41c6eb06d7)
 ![Even2](https://github.com/Matiika/java-project-61/assets/45766685/35ce4691-8af6-4c32-ad39-e39a0adbbe12)
+
+Calc
+![Calc4](https://github.com/Matiika/java-project-61/assets/45766685/f4ecb46a-930a-4fb8-9e8a-a3fd2206191f)
+![Calc5](https://github.com/Matiika/java-project-61/assets/45766685/bc674318-4a0c-4f2f-803e-c5bebeaa0cf6)
+
