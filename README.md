@@ -24,3 +24,9 @@ Progression
 
 ![Progress1](https://github.com/Matiika/java-project-61/assets/45766685/fb3040ff-8b8b-4e2d-b5ca-6e1b83ca6f7e)
 ![Progress2](https://github.com/Matiika/java-project-61/assets/45766685/975fd23c-2e0c-4596-a13e-648b2b6a1f9f)
+
+
+Prime 
+
+![Prime1](https://github.com/Matiika/java-project-61/assets/45766685/73000c12-4118-4f2e-bf7b-9905d74ca652)
+![Prime2](https://github.com/Matiika/java-project-61/assets/45766685/71803b31-f391-4cca-91d2-73eadcc25f43)
