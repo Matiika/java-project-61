@@ -1,6 +1,5 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
 import hexlet.code.Engine;
 
 import java.util.Random;
@@ -25,17 +24,17 @@ public class Calc {
             firstNumber = random.nextInt(10);
             secondNumber = random.nextInt(10);
 
-            switch(mathSymbol) {
+            switch (mathSymbol) {
                 case 0:
-                    System.out.println("Question: "+firstNumber+" + "+secondNumber);
+                    System.out.println("Question: " + firstNumber + " + " + secondNumber);
                     correctAnswer = String.valueOf(firstNumber + secondNumber);
                     break;
                 case 1:
-                    System.out.println("Question: "+firstNumber+" - "+secondNumber);
+                    System.out.println("Question: " + firstNumber + " - " + secondNumber);
                     correctAnswer = String.valueOf(firstNumber - secondNumber);
                     break;
                 case 2:
-                    System.out.println("Question: "+firstNumber+" * "+secondNumber);
+                    System.out.println("Question: " + firstNumber + " * " + secondNumber);
                     correctAnswer = String.valueOf(firstNumber * secondNumber);
                     break;
                 default:
@@ -43,7 +42,9 @@ public class Calc {
             }
 
             answer = Calc.typeAnswer();
-            if (!Engine.checkAnswer(correctAnswer, answer, name)) {break;}
+            if (!Engine.checkAnswer(correctAnswer, answer, name)) {
+                break;
+            }
 
             if (i == 2) {
                 Engine.congratulations(name);

@@ -8,8 +8,9 @@ public class Engine {
             System.out.println("Correct!");
             return true;
         } else  {
-            System.out.println("'" + playerAnswer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'.\n" +
-                    "Let's try again, " + name + "!");
+            System.out.println("'" + playerAnswer + "' is wrong answer ;(. Correct answer was '"
+                    + correctAnswer + "'.\n"
+                    + "Let's try again, " + name + "!");
             return false;
         }
     }

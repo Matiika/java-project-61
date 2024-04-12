@@ -15,22 +15,22 @@ public class GCD {
         int firstNumber;
         int secondNumber;
         String answer;
-        int GCD = 0;
+        int gcd = 0;
 
         for (int i = 0; i < 3; i++) {
             firstNumber = random.nextInt(100);
             secondNumber = random.nextInt(100);
             System.out.println("Question: " + firstNumber + " " + secondNumber);
-            for (int j = 1; j < Math.min(firstNumber,secondNumber) + 1; j++) {
+            for (int j = 1; j < Math.min(firstNumber, secondNumber) + 1; j++) {
                 if (firstNumber % j == 0 && secondNumber % j == 0) {
-                    GCD = j;
+                    gcd = j;
                 }
             }
 
             System.out.print("Your answer: ");
             answer = in.nextLine();
 
-            if (!Engine.checkAnswer(String.valueOf(GCD), answer, name)) {
+            if (!Engine.checkAnswer(String.valueOf(gcd), answer, name)) {
                 break;
             }
 
@@ -38,6 +38,5 @@ public class GCD {
                 Engine.congratulations(name);
             }
         }
-        
     }
 }

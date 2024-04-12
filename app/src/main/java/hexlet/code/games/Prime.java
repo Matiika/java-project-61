@@ -17,7 +17,7 @@ public class Prime {
 
 
         for (int i = 0; i < 3; i++) {
-            randomNumber = random.nextInt(99)+2;
+            randomNumber = random.nextInt(99) + 2;
             System.out.println("Question: " + randomNumber);
 
             System.out.print("Your answer: ");
