@@ -2,6 +2,7 @@ package hexlet.code;
 import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
 import hexlet.code.games.GCD;
+import hexlet.code.games.Progression;
 
 import java.util.Scanner;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -14,6 +15,7 @@ public class Main {
                 "2 - Even\n" +
                 "3 - Calc\n" +
                 "4 - GCD\n" +
+                "5 - Progression\n" +
                 "0 - Exit");
         Scanner in = new Scanner(System.in);
         int playerChoice = in.nextInt();
@@ -33,6 +35,9 @@ public class Main {
                 break;
             case 4:
                 GCD.startGame();
+                break;
+            case 5:
+                Progression.startGame();
                 break;
             default:
                 break;

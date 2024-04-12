@@ -52,8 +52,8 @@ public class Calc {
     }
 
     public static String typeAnswer() {
+        System.out.print("Your answer: ");
         var answer = in.nextLine();
-        System.out.println("Your answer: " + answer);
         return answer;
     }
 }

@@ -26,8 +26,9 @@ public class GCD {
                     GCD = j;
                 }
             }
+
+            System.out.print("Your answer: ");
             answer = in.nextLine();
-            System.out.println("Your answer: " + answer);
 
             if (!Engine.checkAnswer(String.valueOf(GCD), answer, name)) {
                 break;
