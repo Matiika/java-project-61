@@ -10,8 +10,7 @@ Even
 
 Calc
 
-![Calc4](https://github.com/Matiika/java-project-61/assets/45766685/f4ecb46a-930a-4fb8-9e8a-a3fd2206191f)
-![Calc5](https://github.com/Matiika/java-project-61/assets/45766685/bc674318-4a0c-4f2f-803e-c5bebeaa0cf6)
+[![asciicast](https://asciinema.org/a/P2Jdhb7ULUwmikn2U26qdKjbi.svg)](https://asciinema.org/a/P2Jdhb7ULUwmikn2U26qdKjbi)
 
 
 GCD
