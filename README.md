@@ -15,7 +15,7 @@ Calc
 
 GCD
 
-![GDC](https://github.com/Matiika/java-project-61/assets/45766685/50e302fb-5fbc-4470-9027-47e5afcdb5b4)
+[![asciicast](https://asciinema.org/a/zYkE0i32s1xbM2eOjpn1oZohC.svg)](https://asciinema.org/a/zYkE0i32s1xbM2eOjpn1oZohC)
 
 
 Progression
