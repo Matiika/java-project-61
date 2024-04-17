@@ -1,5 +1,4 @@
 plugins {
-    id("java")
     application
     checkstyle
 }
@@ -26,5 +25,5 @@ tasks.getByName("run", JavaExec::class) {
 
 application {
     // Входная точка
-    mainClass.set("hexlet.code.Main")
+    mainClass.set("hexlet.code.App")
 }
