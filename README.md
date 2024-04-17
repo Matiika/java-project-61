@@ -25,5 +25,4 @@ Progression
 
 Prime 
 
-![Prime1](https://github.com/Matiika/java-project-61/assets/45766685/73000c12-4118-4f2e-bf7b-9905d74ca652)
-![Prime2](https://github.com/Matiika/java-project-61/assets/45766685/71803b31-f391-4cca-91d2-73eadcc25f43)
+[![asciicast](https://asciinema.org/a/826YkdxVXiXrjpfrdedHiloZf.svg)](https://asciinema.org/a/826YkdxVXiXrjpfrdedHiloZf)
