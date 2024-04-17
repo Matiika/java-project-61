@@ -20,8 +20,7 @@ GCD
 
 Progression
 
-![Progress1](https://github.com/Matiika/java-project-61/assets/45766685/fb3040ff-8b8b-4e2d-b5ca-6e1b83ca6f7e)
-![Progress2](https://github.com/Matiika/java-project-61/assets/45766685/975fd23c-2e0c-4596-a13e-648b2b6a1f9f)
+[![asciicast](https://asciinema.org/a/lSZ0LzEnrA3weyD4LZZV6qs8Y.svg)](https://asciinema.org/a/lSZ0LzEnrA3weyD4LZZV6qs8Y)
 
 
 Prime 
