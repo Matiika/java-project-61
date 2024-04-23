@@ -20,12 +20,12 @@ public class Prime {
 
         for (int i = 0; i < Engine.getQuestionCount(); i++) {
             int randomNumber = random.nextInt(RANDOM_NUMBER_BOUND_MAX) + randomNumberBoundMin;
-            questionsAndAnswersArray[i][Engine.questionColumn] = String.valueOf(randomNumber);
-            questionsAndAnswersArray[i][Engine.answerColumn] = "yes";
+            questionsAndAnswersArray[i][Engine.getQuestionColumn()] = String.valueOf(randomNumber);
+            questionsAndAnswersArray[i][Engine.getAnswerColumn()] = "yes";
 
             for (int j = 2; j < randomNumber; j++) {
                 if (randomNumber % j == 0) {
-                    questionsAndAnswersArray[i][Engine.answerColumn] = "no";
+                    questionsAndAnswersArray[i][Engine.getAnswerColumn()] = "no";
                     break;
                 }
             }

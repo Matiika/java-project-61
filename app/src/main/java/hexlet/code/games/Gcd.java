@@ -22,7 +22,7 @@ public class Gcd {
         for (int i = 0; i < Engine.getQuestionCount(); i++) {
             int firstNumber = random.nextInt(RANDOM_NUMBER_BOUND);
             int secondNumber = random.nextInt(RANDOM_NUMBER_BOUND);
-            questionsAndAnswersArray[i][Engine.questionColumn] = firstNumber + " " + secondNumber;
+            questionsAndAnswersArray[i][Engine.getQuestionColumn()] = firstNumber + " " + secondNumber;
 
             for (int j = 1; j < Math.min(firstNumber, secondNumber) + 1; j++) {
                 if (firstNumber % j == 0 && secondNumber % j == 0) {
@@ -30,7 +30,7 @@ public class Gcd {
                 }
             }
 
-            questionsAndAnswersArray[i][Engine.answerColumn] = String.valueOf(gcd);
+            questionsAndAnswersArray[i][Engine.getAnswerColumn()] = String.valueOf(gcd);
         }
     }
 }

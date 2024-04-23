@@ -15,12 +15,12 @@ public class Even {
         Random random = new Random();
         for (int i = 0; i < Engine.getQuestionCount(); i++) {
             int randomNumber = random.nextInt(RANDOM_NUMBER_BOUND);
-            questionsAndAnswersArray[i][Engine.questionColumn] = String.valueOf(randomNumber);
+            questionsAndAnswersArray[i][Engine.getQuestionColumn()] = String.valueOf(randomNumber);
 
             if (randomNumber % 2 == 0) {
-                questionsAndAnswersArray[i][Engine.answerColumn] = "yes";
+                questionsAndAnswersArray[i][Engine.getAnswerColumn()] = "yes";
             } else {
-                questionsAndAnswersArray[i][Engine.answerColumn] = "no";
+                questionsAndAnswersArray[i][Engine.getAnswerColumn()] = "no";
             }
         }
     }

@@ -4,24 +4,33 @@ import java.util.Scanner;
 
 public class Engine {
 
-    static final private int QUESTION_COUNT = 3;
+    private static final int QUESTION_COUNT = 3;
+
+    private static final Scanner in = new Scanner(System.in);
+    public static int QUESTION_COLUMN = 0;
+    public static int ANSWER_COLUMN = 1;
+
     public static int getQuestionCount() {
         return QUESTION_COUNT;
     }
 
-    static Scanner in = new Scanner(System.in);
-    public static int questionColumn = 0;
-    public static int answerColumn = 1;
+    public static int getQuestionColumn() {
+        return QUESTION_COLUMN;
+    }
+
+    public static int getAnswerColumn() {
+        return ANSWER_COLUMN;
+    }
     public static void checkAnswer(String[][] questionsAndAnswers, String commonQuestion) {
         String name = Engine.askName();
         System.out.println(commonQuestion);
         for (int i = 0; i < QUESTION_COUNT; i++) {
-            System.out.println("Question: " + questionsAndAnswers[i][questionColumn]);
+            System.out.println("Question: " + questionsAndAnswers[i][QUESTION_COLUMN]);
             System.out.print("Your answer: ");
             String answer = in.nextLine();
-            if (!answer.equals(questionsAndAnswers[i][answerColumn])) {
+            if (!answer.equals(questionsAndAnswers[i][ANSWER_COLUMN])) {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
-                        + questionsAndAnswers[i][answerColumn] + "'.\n"
+                        + questionsAndAnswers[i][ANSWER_COLUMN] + "'.\n"
                         + "Let's try again, " + name + "!");
                 return;
             }

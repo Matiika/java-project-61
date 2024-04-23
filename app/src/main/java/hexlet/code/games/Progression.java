@@ -31,13 +31,13 @@ public class Progression {
                 if (j == position) {
                     question += " ..";
                     start += step;
-                    questionsAndAnswersArray[i][Engine.answerColumn] = String.valueOf(start);
+                    questionsAndAnswersArray[i][Engine.getAnswerColumn()] = String.valueOf(start);
                     continue;
                 }
                 start += step;
                 question += (" " + start);
             }
-            questionsAndAnswersArray[i][Engine.questionColumn] = question;
+            questionsAndAnswersArray[i][Engine.getQuestionColumn()] = question;
         }
     }
 }

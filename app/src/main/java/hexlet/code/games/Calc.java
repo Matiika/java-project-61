@@ -25,16 +25,16 @@ public class Calc {
 
             switch (mathSymbol) {
                 case 0:
-                    questionsAndAnswersArray[i][Engine.questionColumn] = (firstNumber + " + " + secondNumber);
-                    questionsAndAnswersArray[i][Engine.answerColumn] = String.valueOf(firstNumber + secondNumber);
+                    questionsAndAnswersArray[i][Engine.getQuestionColumn()] = (firstNumber + " + " + secondNumber);
+                    questionsAndAnswersArray[i][Engine.getAnswerColumn()] = String.valueOf(firstNumber + secondNumber);
                     break;
                 case 1:
-                    questionsAndAnswersArray[i][Engine.questionColumn] = (firstNumber + " - " + secondNumber);
-                    questionsAndAnswersArray[i][Engine.answerColumn] = String.valueOf(firstNumber - secondNumber);
+                    questionsAndAnswersArray[i][Engine.getQuestionColumn()] = (firstNumber + " - " + secondNumber);
+                    questionsAndAnswersArray[i][Engine.getAnswerColumn()] = String.valueOf(firstNumber - secondNumber);
                     break;
                 case 2:
-                    questionsAndAnswersArray[i][Engine.questionColumn] = (firstNumber + " * " + secondNumber);
-                    questionsAndAnswersArray[i][Engine.answerColumn] = String.valueOf(firstNumber * secondNumber);
+                    questionsAndAnswersArray[i][Engine.getQuestionColumn()] = (firstNumber + " * " + secondNumber);
+                    questionsAndAnswersArray[i][Engine.getAnswerColumn()] = String.valueOf(firstNumber * secondNumber);
                     break;
                 default:
                     break;
