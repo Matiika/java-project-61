@@ -1,17 +1,21 @@
 package hexlet.code;
-import hexlet.code.games.*;
+import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
+import hexlet.code.games.Gcd;
+import hexlet.code.games.Prime;
+import hexlet.code.games.Progression;
 
 import java.util.Scanner;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class App {
-    final static int greet = 1;
-    final static int even = 2;
-    final static int calc = 3;
-    final static int gcd = 4;
-    final static int progression = 5;
-    final static int prime = 6;
-    final static int exit = 0;
+    final static int GREET = 1;
+    final static int EVEN = 2;
+    final static int CALC = 3;
+    final static int GCD = 4;
+    final static int PROGRESSION = 5;
+    final static int PRIME = 6;
+    final static int EXIT = 0;
 
     public static void main(String[] args) {
         System.out.println("Please enter the game number and press Enter.\n"
@@ -27,24 +31,24 @@ public class App {
         System.out.println("Your choice: " + playerChoice);
 
         switch (playerChoice) {
-            case exit:
+            case EXIT:
                 break;
-            case greet:
+            case GREET:
                 Cli.askName();
                 break;
-            case even:
+            case EVEN:
                 Even.startGame();
                 break;
-            case calc:
+            case CALC:
                 Calc.startGame();
                 break;
-            case gcd:
-                GCD.startGame();
+            case GCD:
+                Gcd.startGame();
                 break;
-            case progression:
+            case PROGRESSION:
                 Progression.startGame();
                 break;
-            case prime:
+            case PRIME:
                 Prime.startGame();
                 break;
             default:
