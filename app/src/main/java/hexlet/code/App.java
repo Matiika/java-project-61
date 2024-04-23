@@ -5,8 +5,15 @@ import java.util.Scanner;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class App {
+    final static int greet = 1;
+    final static int even = 2;
+    final static int calc = 3;
+    final static int gcd = 4;
+    final static int progression = 5;
+    final static int prime = 6;
+    final static int exit = 0;
+
     public static void main(String[] args) {
-        System.out.println("Welcome to the Brain Games!");
         System.out.println("Please enter the game number and press Enter.\n"
                 + "1 - Greet\n"
                 + "2 - Even\n"
@@ -20,28 +27,28 @@ public class App {
         System.out.println("Your choice: " + playerChoice);
 
         switch (playerChoice) {
-            case 0:
+            case exit:
                 break;
-            case 1:
+            case greet:
                 Cli.askName();
                 break;
-            case 2:
+            case even:
                 Even.startGame();
                 break;
-            case 3:
+            case calc:
                 Calc.startGame();
                 break;
-            case 4:
+            case gcd:
                 GCD.startGame();
                 break;
-            case 5:
+            case progression:
                 Progression.startGame();
                 break;
-            case 6:
+            case prime:
                 Prime.startGame();
                 break;
             default:
-                System.out.println("Такого варианта выбора нет");
+                System.out.println("No such option");
                 break;
         }
 
