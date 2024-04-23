@@ -6,9 +6,9 @@ public class Engine {
 
     private static final int QUESTION_COUNT = 3;
 
-    private static final Scanner in = new Scanner(System.in);
-    public static int QUESTION_COLUMN = 0;
-    public static int ANSWER_COLUMN = 1;
+    private static final Scanner IN = new Scanner(System.in);
+    private static final int QUESTION_COLUMN = 0;
+    private static final int ANSWER_COLUMN = 1;
 
     public static int getQuestionCount() {
         return QUESTION_COUNT;
@@ -27,7 +27,7 @@ public class Engine {
         for (int i = 0; i < QUESTION_COUNT; i++) {
             System.out.println("Question: " + questionsAndAnswers[i][QUESTION_COLUMN]);
             System.out.print("Your answer: ");
-            String answer = in.nextLine();
+            String answer = IN.nextLine();
             if (!answer.equals(questionsAndAnswers[i][ANSWER_COLUMN])) {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
                         + questionsAndAnswers[i][ANSWER_COLUMN] + "'.\n"
@@ -46,7 +46,7 @@ public class Engine {
     public static String askName() {
 
         System.out.print("May I have your name? ");
-        var name = in.nextLine();
+        var name = IN.nextLine();
         System.out.println("Hello, " + name + "!");
         return name;
     }
