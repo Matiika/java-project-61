@@ -4,14 +4,18 @@ import java.util.Scanner;
 
 public class Engine {
 
-    static public int questionCount = 3;
+    static final private int QUESTION_COUNT = 3;
+    public static int getQuestionCount() {
+        return QUESTION_COUNT;
+    }
+
     static Scanner in = new Scanner(System.in);
     public static int questionColumn = 0;
     public static int answerColumn = 1;
     public static void checkAnswer(String[][] questionsAndAnswers, String commonQuestion) {
         String name = Engine.askName();
         System.out.println(commonQuestion);
-        for (int i = 0; i < questionCount; i++) {
+        for (int i = 0; i < QUESTION_COUNT; i++) {
             System.out.println("Question: " + questionsAndAnswers[i][questionColumn]);
             System.out.print("Your answer: ");
             String answer = in.nextLine();
