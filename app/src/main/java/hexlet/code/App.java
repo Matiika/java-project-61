@@ -31,24 +31,24 @@ public class App {
         System.out.println("Your choice: " + playerChoice);
 
         switch (playerChoice) {
-            case EXIT:
+            case App.EXIT:
                 break;
-            case GREET:
+            case App.GREET:
                 Cli.askName();
                 break;
-            case EVEN:
+            case App.EVEN:
                 Even.startGame();
                 break;
-            case CALC:
+            case App.CALC:
                 Calc.startGame();
                 break;
-            case GCD:
+            case App.GCD:
                 Gcd.startGame();
                 break;
-            case PROGRESSION:
+            case App.PROGRESSION:
                 Progression.startGame();
                 break;
-            case PRIME:
+            case App.PRIME:
                 Prime.startGame();
                 break;
             default:
