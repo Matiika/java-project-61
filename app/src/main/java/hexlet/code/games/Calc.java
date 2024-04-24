@@ -7,13 +7,6 @@ public class Calc {
     private static final int MATH_SYMBOL_COUNT = 3;
     private static final int NUMBER_BOUND = 10;
 
-    public static void startGame() {
-        String commonQuestion = "What is the result of the expression?";
-        String[][] questionsAndAnswersArray = Engine.createQuestionsAndAnswersArray(Engine.getQuestionCount());
-        generateQuestionsAndAnswers(questionsAndAnswersArray);
-        Engine.checkAnswer(questionsAndAnswersArray, commonQuestion);
-    }
-
     public static void generateQuestionsAndAnswers(String[][] questionsAndAnswersArray) {
         Random random = new Random();
         for (int i = 0; i < Engine.getQuestionCount(); i++) {

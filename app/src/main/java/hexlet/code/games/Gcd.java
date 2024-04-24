@@ -7,14 +7,6 @@ import java.util.Random;
 public class Gcd {
     private static final int RANDOM_NUMBER_BOUND = 100;
 
-    public static void startGame() {
-        String commonQuestion = "Find the greatest common divisor of given numbers.";
-        String[][] questionsAndAnswersArray = Engine.createQuestionsAndAnswersArray(Engine.getQuestionCount());
-        generateQuestionsAndAnswers(questionsAndAnswersArray);
-        Engine.checkAnswer(questionsAndAnswersArray, commonQuestion);
-
-    }
-
     public static void generateQuestionsAndAnswers(String[][] questionsAndAnswersArray) {
         Random random = new Random();
         int gcd = 0;

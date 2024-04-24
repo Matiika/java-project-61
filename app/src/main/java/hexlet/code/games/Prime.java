@@ -6,13 +6,6 @@ import java.util.Random;
 public class Prime {
     private static final int RANDOM_NUMBER_BOUND_MAX = 99;
 
-    public static void startGame() {
-        String commonQuestion = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-        String[][] questionsAndAnswersArray = Engine.createQuestionsAndAnswersArray(Engine.getQuestionCount());
-        generateQuestionsAndAnswers(questionsAndAnswersArray);
-        Engine.checkAnswer(questionsAndAnswersArray, commonQuestion);
-    }
-
     public static void generateQuestionsAndAnswers(String[][] questionsAndAnswersArray) {
         Random random = new Random();
 
