@@ -6,7 +6,7 @@ import java.util.Random;
 public class Calc {
     private static final int MATH_SYMBOL_COUNT = 3;
     private static final int NUMBER_BOUND = 10;
-    private static Random RANDOM = new Random();
+    private static Random random = new Random();
     public static void startGame() {
         String[][] questionsAndAnswers = Engine.createQuestionsAndAnswersArray(Engine.getQuestionCount());
         String commonQuestion = "What is the result of the expression?";
@@ -17,8 +17,8 @@ public class Calc {
     public static void generateQuestionsAndAnswers(String[][] questionsAndAnswersArray) {
 
         for (int i = 0; i < Engine.getQuestionCount(); i++) {
-            var firstNumber = RANDOM.nextInt(NUMBER_BOUND);
-            var secondNumber = RANDOM.nextInt(NUMBER_BOUND);
+            var firstNumber = random.nextInt(NUMBER_BOUND);
+            var secondNumber = random.nextInt(NUMBER_BOUND);
             String[] questionAndAnswer = choiceMathOperation(firstNumber, secondNumber);
 
             questionsAndAnswersArray[i][Engine.getQuestionColumn()] =
@@ -29,7 +29,7 @@ public class Calc {
     }
 
     public static String[] choiceMathOperation(int firstNumber, int secondNumber) {
-        int mathSymbol = RANDOM.nextInt(MATH_SYMBOL_COUNT);
+        int mathSymbol = random.nextInt(MATH_SYMBOL_COUNT);
         String[] mathExpression = new String[2];
         switch (mathSymbol) {
             case 0:

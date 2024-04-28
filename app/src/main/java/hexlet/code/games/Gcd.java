@@ -4,8 +4,6 @@ import hexlet.code.Engine;
 
 import java.util.Random;
 
-import static hexlet.code.Engine.createQuestionsAndAnswersArray;
-
 public class Gcd {
     private static final int RANDOM_NUMBER_BOUND = 100;
 
