@@ -8,10 +8,16 @@ public class Progression {
     private static final int STEP_MAX_RANDOM = 7;
     private static final int NUMBER_AMOUNT = 9;
 
+    public static void startGame() {
+        String[][] questionsAndAnswers = Engine.createQuestionsAndAnswersArray(Engine.getQuestionCount());
+        String commonQuestion = "What number is missing in the progression?";
+        generateQuestionsAndAnswers(questionsAndAnswers);
+        Engine.startGame(questionsAndAnswers, commonQuestion);
+    }
+
     public static void generateQuestionsAndAnswers(String[][] questionsAndAnswersArray) {
         Random random = new Random();
         for (int i = 0; i < Engine.getQuestionCount(); i++) {
-
 
             int stepMinRandom = 2;
             int step = random.nextInt(STEP_MAX_RANDOM) + stepMinRandom;

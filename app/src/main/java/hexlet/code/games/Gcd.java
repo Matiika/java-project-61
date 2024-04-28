@@ -4,8 +4,17 @@ import hexlet.code.Engine;
 
 import java.util.Random;
 
+import static hexlet.code.Engine.createQuestionsAndAnswersArray;
+
 public class Gcd {
     private static final int RANDOM_NUMBER_BOUND = 100;
+
+    public static void startGame() {
+        String[][] questionsAndAnswers = Engine.createQuestionsAndAnswersArray(Engine.getQuestionCount());
+        String commonQuestion = "Find the greatest common divisor of given numbers.";
+        generateQuestionsAndAnswers(questionsAndAnswers);
+        Engine.startGame(questionsAndAnswers, commonQuestion);
+    }
 
     public static void generateQuestionsAndAnswers(String[][] questionsAndAnswersArray) {
         Random random = new Random();
@@ -20,6 +29,10 @@ public class Gcd {
                 if (firstNumber % j == 0 && secondNumber % j == 0) {
                     gcd = j;
                 }
+            }
+
+            if (firstNumber == 0 || secondNumber == 0) {
+                gcd = 0;
             }
 
             questionsAndAnswersArray[i][Engine.getAnswerColumn()] = String.valueOf(gcd);
