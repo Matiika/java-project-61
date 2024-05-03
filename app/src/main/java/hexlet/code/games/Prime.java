@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 import java.util.Random;
 public class Prime {
@@ -14,22 +15,22 @@ public class Prime {
     }
 
     public static void generateQuestionsAndAnswers(String[][] questionsAndAnswersArray) {
-        Random random = new Random();
 
         int randomNumberBoundMin = 2;
 
         for (int i = 0; i < Engine.getQuestionCount(); i++) {
-            int randomNumber = random.nextInt(RANDOM_NUMBER_BOUND_MAX) + randomNumberBoundMin;
+            int randomNumber = Utils.getRandomInt(randomNumberBoundMin, RANDOM_NUMBER_BOUND_MAX);
             questionsAndAnswersArray[i][Engine.getQuestionColumn()] = String.valueOf(randomNumber);
-            questionsAndAnswersArray[i][Engine.getAnswerColumn()] = "yes";
-
-            for (int j = 2; j < randomNumber; j++) {
-                if (randomNumber % j == 0) {
-                    questionsAndAnswersArray[i][Engine.getAnswerColumn()] = "no";
-                    break;
-                }
-            }
+            questionsAndAnswersArray[i][Engine.getAnswerColumn()] = isPrime(randomNumber) ? "yes" : "no";
         }
     }
 
+    public static boolean isPrime(int randomNumber) {
+        for (int j = 2; j < randomNumber; j++) {
+            if (randomNumber % j == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
 }

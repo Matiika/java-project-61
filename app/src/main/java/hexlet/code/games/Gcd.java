@@ -1,8 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
-import java.util.Random;
+import hexlet.code.Utils;
 
 public class Gcd {
     private static final int RANDOM_NUMBER_BOUND = 100;
@@ -15,25 +14,27 @@ public class Gcd {
     }
 
     public static void generateQuestionsAndAnswers(String[][] questionsAndAnswersArray) {
-        Random random = new Random();
         int gcd = 0;
 
         for (int i = 0; i < Engine.getQuestionCount(); i++) {
-            int firstNumber = random.nextInt(RANDOM_NUMBER_BOUND);
-            int secondNumber = random.nextInt(RANDOM_NUMBER_BOUND);
+            int firstNumber = Utils.getRandomInt(0, RANDOM_NUMBER_BOUND);
+            int secondNumber = Utils.getRandomInt(0, RANDOM_NUMBER_BOUND);
             questionsAndAnswersArray[i][Engine.getQuestionColumn()] = firstNumber + " " + secondNumber;
-
-            for (int j = 1; j < Math.min(firstNumber, secondNumber) + 1; j++) {
-                if (firstNumber % j == 0 && secondNumber % j == 0) {
-                    gcd = j;
-                }
-            }
-
-            if (firstNumber == 0 || secondNumber == 0) {
-                gcd = 0;
-            }
-
-            questionsAndAnswersArray[i][Engine.getAnswerColumn()] = String.valueOf(gcd);
+            questionsAndAnswersArray[i][Engine.getAnswerColumn()] = String.valueOf(getGcd(firstNumber, secondNumber));
         }
+    }
+
+    public static int getGcd(int firstNumber, int secondNumber) {
+        int gcd = 0;
+        if (firstNumber == 0 || secondNumber == 0) {
+            return Math.max(firstNumber, secondNumber);
+        }
+
+        for (int j = 1; j < Math.min(firstNumber, secondNumber) + 1; j++) {
+            if (firstNumber % j == 0 && secondNumber % j == 0) {
+                gcd = j;
+            }
+        }
+        return gcd;
     }
 }

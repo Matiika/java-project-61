@@ -1,5 +1,6 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 import java.util.Random;
 public class Even {
@@ -15,17 +16,13 @@ public class Even {
     public static void generateQuestionsAndAnswers(String[][] questionsAndAnswersArray) {
         Random random = new Random();
         for (int i = 0; i < Engine.getQuestionCount(); i++) {
-            int randomNumber = random.nextInt(RANDOM_NUMBER_BOUND);
+            int randomNumber = Utils.getRandomInt(0, RANDOM_NUMBER_BOUND);
             questionsAndAnswersArray[i][Engine.getQuestionColumn()] = String.valueOf(randomNumber);
-            questionsAndAnswersArray[i][Engine.getAnswerColumn()] = answer(randomNumber);
+            questionsAndAnswersArray[i][Engine.getAnswerColumn()] = isEven(randomNumber) ? "yes" : "no";
         }
     }
 
-    public static String answer(int randomNumber) {
-        if (randomNumber % 2 == 0) {
-            return "yes";
-        } else {
-            return "no";
-        }
+    public static boolean isEven(int randomNumber) {
+        return  randomNumber % 2 == 0 ? true : false;
     }
 }
