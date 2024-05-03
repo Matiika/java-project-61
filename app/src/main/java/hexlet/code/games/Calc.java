@@ -6,7 +6,7 @@ import hexlet.code.Utils;
 public class Calc {
     private static final int MATH_SYMBOL_COUNT = 2;
     private static final int NUMBER_BOUND = 9;
-    private static final String[] MATH_SYMBOL_ARRAY = {"+" , "-" , "*"};
+    private static final String[] MATH_SYMBOL_ARRAY = {"+", "-", "*"};
 
     public static void startGame() {
         String[][] questionsAndAnswers = Engine.createQuestionsAndAnswersArray(Engine.getQuestionCount());
@@ -21,8 +21,8 @@ public class Calc {
             var firstNumber = Utils.getRandomInt(0, NUMBER_BOUND);
             var secondNumber = Utils.getRandomInt(0, NUMBER_BOUND);
 
-            String[] questionAndAnswer = choiceMathOperation(MATH_SYMBOL_ARRAY[Utils.getRandomInt(0, MATH_SYMBOL_COUNT)]
-                                                                    , firstNumber, secondNumber);
+            String[] questionAndAnswer = choiceMathOperation(MATH_SYMBOL_ARRAY[Utils.getRandomInt(0, MATH_SYMBOL_COUNT)],
+                                                                                        firstNumber, secondNumber);
 
             questionsAndAnswersArray[i][Engine.getQuestionColumn()] =
                     questionAndAnswer[Engine.getQuestionColumn()];
