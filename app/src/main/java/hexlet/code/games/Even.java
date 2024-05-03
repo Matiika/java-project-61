@@ -14,7 +14,6 @@ public class Even {
     }
 
     public static void generateQuestionsAndAnswers(String[][] questionsAndAnswersArray) {
-        Random random = new Random();
         for (int i = 0; i < Engine.getQuestionCount(); i++) {
             int randomNumber = Utils.getRandomInt(0, RANDOM_NUMBER_BOUND);
             questionsAndAnswersArray[i][Engine.getQuestionColumn()] = String.valueOf(randomNumber);
@@ -23,6 +22,6 @@ public class Even {
     }
 
     public static boolean isEven(int randomNumber) {
-        return  randomNumber % 2 == 0 ? true : false;
+        return randomNumber % 2 == 0;
     }
 }
