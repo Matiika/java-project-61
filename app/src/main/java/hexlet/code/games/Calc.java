@@ -21,8 +21,8 @@ public class Calc {
             var firstNumber = Utils.getRandomInt(0, NUMBER_BOUND);
             var secondNumber = Utils.getRandomInt(0, NUMBER_BOUND);
 
-            String[] questionAndAnswer = choiceMathOperation(MATH_SYMBOL_ARRAY[Utils.getRandomInt(0, MATH_SYMBOL_COUNT)],
-                                                                                        firstNumber, secondNumber);
+            String[] questionAndAnswer = choiceMathOperation
+                    (MATH_SYMBOL_ARRAY[Utils.getRandomInt(0, MATH_SYMBOL_COUNT)], firstNumber, secondNumber);
 
             questionsAndAnswersArray[i][Engine.getQuestionColumn()] =
                     questionAndAnswer[Engine.getQuestionColumn()];
