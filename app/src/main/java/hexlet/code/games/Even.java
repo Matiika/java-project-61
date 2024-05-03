@@ -1,8 +1,6 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
-
-import java.util.Random;
 public class Even {
     private static final int RANDOM_NUMBER_BOUND = 100;
 
