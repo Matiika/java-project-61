@@ -23,9 +23,9 @@ public class Calc {
                     MATH_SYMBOL_ARRAY[Utils.getRandomInt(0, MATH_SYMBOL_ARRAY.length - 1)];
 
             questionsAndAnswersArray[i][Engine.getQuestionColumn()] =
-                    firstNumber + " " +
-                            randomMathSymbol +
-                            " " + secondNumber;
+                    firstNumber + " "
+                            + randomMathSymbol
+                            + " " + secondNumber;
             questionsAndAnswersArray[i][Engine.getAnswerColumn()] =
                     String.valueOf(choiceMathOperation(randomMathSymbol, firstNumber, secondNumber));
         }
