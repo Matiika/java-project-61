@@ -5,7 +5,7 @@ public class Even {
     private static final int RANDOM_NUMBER_BOUND = 100;
 
     public static void startGame() {
-        String[][] questionsAndAnswers = Engine.createQuestionsAndAnswersArray(Engine.getQuestionCount());
+        String[][] questionsAndAnswers = new String[Engine.getQuestionCount()][2];
         String commonQuestion = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         generateQuestionsAndAnswers(questionsAndAnswers);
         Engine.startGame(questionsAndAnswers, commonQuestion);

@@ -8,7 +8,7 @@ public class Progression {
     private static final int PROGRESSION_LENGTH = 9;
 
     public static void startGame() {
-        String[][] questionsAndAnswers = Engine.createQuestionsAndAnswersArray(Engine.getQuestionCount());
+        String[][] questionsAndAnswers = new String[Engine.getQuestionCount()][2];
         String commonQuestion = "What number is missing in the progression?";
         generateQuestionsAndAnswers(questionsAndAnswers);
         Engine.startGame(questionsAndAnswers, commonQuestion);

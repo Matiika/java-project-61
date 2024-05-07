@@ -6,7 +6,7 @@ public class Prime {
     private static final int RANDOM_NUMBER_BOUND_MAX = 99;
 
     public static void startGame() {
-        String[][] questionsAndAnswers = Engine.createQuestionsAndAnswersArray(Engine.getQuestionCount());
+        String[][] questionsAndAnswers = new String[Engine.getQuestionCount()][2];
         String commonQuestion = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         generateQuestionsAndAnswers(questionsAndAnswers);
         Engine.startGame(questionsAndAnswers, commonQuestion);
@@ -14,16 +14,18 @@ public class Prime {
 
     public static void generateQuestionsAndAnswers(String[][] questionsAndAnswersArray) {
 
-        int randomNumberBoundMin = 2;
-
         for (int i = 0; i < Engine.getQuestionCount(); i++) {
-            int randomNumber = Utils.getRandomInt(randomNumberBoundMin, RANDOM_NUMBER_BOUND_MAX);
+            int randomNumber = Utils.getRandomInt(0, RANDOM_NUMBER_BOUND_MAX);
             questionsAndAnswersArray[i][Engine.getQuestionColumn()] = String.valueOf(randomNumber);
             questionsAndAnswersArray[i][Engine.getAnswerColumn()] = isPrime(randomNumber) ? "yes" : "no";
         }
     }
 
     public static boolean isPrime(int randomNumber) {
+        if (randomNumber == 0 || randomNumber == 1) {
+            return false;
+        }
+
         for (int j = 2; j < randomNumber; j++) {
             if (randomNumber % j == 0) {
                 return false;

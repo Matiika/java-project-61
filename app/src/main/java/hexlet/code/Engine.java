@@ -44,9 +44,4 @@ public class Engine {
         }
         System.out.println("Congratulations, " + name + "!");
     }
-
-    public static String[][] createQuestionsAndAnswersArray(int questionCount) {
-        int columnAnswer = 2;
-        return new String[questionCount][columnAnswer];
-    }
 }

@@ -7,7 +7,7 @@ public class Gcd {
     private static final int RANDOM_NUMBER_BOUND = 100;
 
     public static void startGame() {
-        String[][] questionsAndAnswers = Engine.createQuestionsAndAnswersArray(Engine.getQuestionCount());
+        String[][] questionsAndAnswers = new String[Engine.getQuestionCount()][2];
         String commonQuestion = "Find the greatest common divisor of given numbers.";
         generateQuestionsAndAnswers(questionsAndAnswers);
         Engine.startGame(questionsAndAnswers, commonQuestion);
