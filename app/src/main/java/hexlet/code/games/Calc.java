@@ -23,20 +23,20 @@ public class Calc {
                     MATH_SYMBOL_ARRAY[Utils.getRandomInt(0, MATH_SYMBOL_ARRAY.length - 1)];
 
             questionsAndAnswersArray[i][Engine.getQuestionColumn()] =
-                    firstNumber + " "
-                            + randomMathSymbol
-                            + " " + secondNumber;
+                                                                    firstNumber + " "
+                                                                    + randomMathSymbol
+                                                                    + " " + secondNumber;
             questionsAndAnswersArray[i][Engine.getAnswerColumn()] =
                     String.valueOf(choiceMathOperation(randomMathSymbol, firstNumber, secondNumber));
         }
     }
 
-    public static int choiceMathOperation(char mathSymbol, int firstNumber, int secondNumber) {
+    public static Integer choiceMathOperation(char mathSymbol, int firstNumber, int secondNumber) {
         return switch (mathSymbol) {
             case '+' -> firstNumber + secondNumber;
             case '-' -> firstNumber - secondNumber;
             case '*' -> firstNumber * secondNumber;
-            default -> 0;
+            default -> null;
         };
     }
 

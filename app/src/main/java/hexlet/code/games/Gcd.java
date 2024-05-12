@@ -14,7 +14,6 @@ public class Gcd {
     }
 
     public static void generateQuestionsAndAnswers(String[][] questionsAndAnswersArray) {
-        int gcd = 0;
 
         for (int i = 0; i < Engine.getQuestionCount(); i++) {
             int firstNumber = Utils.getRandomInt(0, RANDOM_NUMBER_BOUND);

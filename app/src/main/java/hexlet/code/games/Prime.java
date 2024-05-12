@@ -22,7 +22,7 @@ public class Prime {
     }
 
     public static boolean isPrime(int randomNumber) {
-        if (randomNumber == 0 || randomNumber == 1) {
+        if (randomNumber < 2) {
             return false;
         }
 
